@@ -51,7 +51,19 @@ export default function Team() {
             className="flex flex-col items-start gap-4 rounded-2xl border p-8"
             style={{ borderColor: 'var(--line)' }}
           >
-            <Avatar name={person.name} photo={person.photo} inverted={i % 2 === 1} />
+            <div className="flex w-full items-start justify-between gap-4">
+              <Avatar name={person.name} photo={person.photo} inverted={i % 2 === 1} />
+              <a
+                href={person.linkedin}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label={`${person.name} on LinkedIn`}
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-colors hover:text-[var(--ink)]"
+                style={{ border: '1px solid var(--line)', color: 'var(--muted)' }}
+              >
+                <LinkedInIcon className="h-4 w-4" />
+              </a>
+            </div>
             <div>
               <h3 className="font-[var(--font-display)] text-xl font-semibold" style={{ color: 'var(--ink)' }}>
                 {person.name}
@@ -60,21 +72,26 @@ export default function Team() {
                 {person.role}
               </p>
             </div>
-            {person.bio && (
+
+            {person.industries && (
+              <div className="flex flex-wrap gap-2">
+                {person.industries.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full px-3 py-1 text-xs font-medium"
+                    style={{ border: '1px solid var(--line)', color: 'var(--body)' }}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {person.summary && (
               <p className="text-sm leading-relaxed" style={{ color: 'var(--body)' }}>
-                {person.bio}
+                {person.summary}
               </p>
             )}
-            <a
-              href={person.linkedin}
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label={`${person.name} on LinkedIn`}
-              className="flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:text-[var(--ink)]"
-              style={{ border: '1px solid var(--line)', color: 'var(--muted)' }}
-            >
-              <LinkedInIcon className="h-4 w-4" />
-            </a>
           </motion.div>
         ))}
       </div>

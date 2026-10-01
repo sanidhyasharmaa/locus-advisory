@@ -39,8 +39,8 @@ function Avatar({ name, photo, inverted }) {
 export default function Team() {
   const reduce = useReducedMotion()
   return (
-    <section className="px-6 py-14 sm:px-16">
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+    <section className="px-6 pb-14 sm:px-16">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {team.map((person, i) => (
           <motion.div
             key={person.name}
@@ -48,7 +48,7 @@ export default function Team() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1], delay: i * 0.08 }}
-            className="flex flex-col items-start gap-4 rounded-2xl border p-8"
+            className="flex flex-col items-start gap-3 rounded-2xl border p-8"
             style={{ borderColor: 'var(--line)' }}
           >
             <div className="flex w-full items-start justify-between gap-4">
@@ -68,13 +68,13 @@ export default function Team() {
               <h3 className="font-[var(--font-display)] text-xl font-semibold" style={{ color: 'var(--ink)' }}>
                 {person.name}
               </h3>
-              <p className="mt-1 text-sm font-medium" style={{ color: 'var(--muted)' }}>
+              <p className="text-sm font-medium" style={{ color: 'var(--muted)' }}>
                 {person.role}
               </p>
             </div>
 
             {person.industries && (
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5">
                 {person.industries.map((tag) => (
                   <span
                     key={tag}

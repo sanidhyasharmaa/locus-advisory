@@ -60,6 +60,11 @@ export default function Team() {
                 {person.role}
               </p>
             </div>
+            {person.bio && (
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--body)' }}>
+                {person.bio}
+              </p>
+            )}
             <a
               href={person.linkedin}
               target="_blank"

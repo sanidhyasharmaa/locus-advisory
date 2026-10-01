@@ -6,6 +6,7 @@ const LINKS = [
   { to: '/services', label: 'Services' },
   { to: '/pricing', label: 'Pricing' },
   { to: '/why-us', label: 'Why us' },
+  { to: '/about', label: 'About' },
 ]
 
 export default function Nav() {

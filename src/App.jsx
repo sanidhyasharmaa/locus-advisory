@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Services from './pages/Services'
 import Pricing from './pages/Pricing'
 import OurWork from './pages/OurWork'
+import About from './pages/About'
 import ContactPage from './pages/ContactPage'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
@@ -24,6 +25,7 @@ export default function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/why-us" element={<OurWork />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />

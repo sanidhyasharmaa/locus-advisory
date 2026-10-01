@@ -40,6 +40,9 @@ export default function Footer() {
           <Link to="/why-us" className="transition-colors hover:text-[var(--ink)]">
             Why us
           </Link>
+          <Link to="/about" className="transition-colors hover:text-[var(--ink)]">
+            About
+          </Link>
           <Link to="/contact" className="transition-colors hover:text-[var(--ink)]">
             Contact
           </Link>

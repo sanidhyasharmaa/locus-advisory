@@ -7,8 +7,8 @@ export default function About() {
     <>
       <PageHeader
         eyebrow="About us"
-        title="Two people, one point of contact."
-        subtitle="Locus Advisory is run by a small, hands-on team — no account managers, no handoffs. You work directly with the people doing the work."
+        title="Small team, no wasted layers."
+        subtitle="Locus Advisory is run by a small, skilled team — no account managers, no handoffs. You work directly with the people doing the work."
       />
       <Team />
       <div className="pb-14">
